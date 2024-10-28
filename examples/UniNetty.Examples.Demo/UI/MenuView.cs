@@ -27,31 +27,31 @@ public class MenuView : IView
                     var currentDirectory = Directory.GetCurrentDirectory();
                     DirectoryUtils.OpenDirectory(currentDirectory);
                 }
-                
+
                 ImGui.EndMenu();
             }
-            
+
             if (ImGui.BeginMenu("Help"))
             {
                 if (ImGui.MenuItem("Repository"))
                 {
-                    ExampleSupport.Shared.OpenUrl("https://github.com/ikpil/UniNetty");
+                    UniNettyExampleSupports.OpenUrl("https://github.com/ikpil/UniNetty");
                 }
 
                 if (ImGui.MenuItem("Nuget"))
                 {
-                    ExampleSupport.Shared.OpenUrl("https://www.nuget.org/packages/UniNetty.Common/");
+                    UniNettyExampleSupports.OpenUrl("https://www.nuget.org/packages/UniNetty.Common/");
                 }
 
                 ImGui.Separator();
                 if (ImGui.MenuItem("Issue Tracker"))
                 {
-                    ExampleSupport.Shared.OpenUrl("https://github.com/ikpil/UniNetty/issues");
+                    UniNettyExampleSupports.OpenUrl("https://github.com/ikpil/UniNetty/issues");
                 }
 
                 if (ImGui.MenuItem("Release Notes"))
                 {
-                    ExampleSupport.Shared.OpenUrl("https://github.com/ikpil/UniNetty/blob/main/CHANGELOG.md");
+                    UniNettyExampleSupports.OpenUrl("https://github.com/ikpil/UniNetty/blob/main/CHANGELOG.md");
                 }
 
                 ImGui.EndMenu();

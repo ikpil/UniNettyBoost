@@ -9,9 +9,9 @@ public class Canvas
     public Vector2 Size;
     private ImmutableArray<IView> _view;
 
-    public readonly ExampleContext Context;
+    public readonly UniNettyExampleContext Context;
 
-    public Canvas(ExampleContext context)
+    public Canvas(UniNettyExampleContext context)
     {
         Context = context;
         _view = ImmutableArray<IView>.Empty;

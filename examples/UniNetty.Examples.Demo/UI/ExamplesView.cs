@@ -41,33 +41,33 @@ public class ExamplesView : IView
             if (null == example)
                 continue;
 
-            var showSettings = ImGui.TreeNodeEx(example.Example.Name, ImGuiTreeNodeFlags.Bullet | ImGuiTreeNodeFlags.SpanFullWidth);
+            var showSettings = ImGui.TreeNodeEx(example.Setting.Example.Name, ImGuiTreeNodeFlags.Bullet | ImGuiTreeNodeFlags.SpanFullWidth);
             if (showSettings)
             {
-                int port = example.Port;
-                if (ImGui.InputInt(" " + example.Example.Name + " Port", ref port)) ;
+                int port = example.Setting.Port;
+                if (ImGui.InputInt(" " + example.Setting.Example.Name + " Port", ref port)) ;
                 {
-                    example.SetPort(port);
+                    example.Setting.SetPort(port);
                 }
 
                 // use size
-                if (0 != example.Size)
+                if (0 != example.Setting.Size)
                 {
-                    int size = example.Size;
-                    if (ImGui.InputInt(" " + example.Example.Name + " Size", ref size))
+                    int size = example.Setting.Size;
+                    if (ImGui.InputInt(" " + example.Setting.Example.Name + " Size", ref size))
                     {
-                        example.SetSize(size);
+                        example.Setting.SetSize(size);
                     }
                 }
 
                 var btnServer = example.IsRunningServer ? "Stop Server" : "Run Server";
-                if (ImGui.Button(example.Example.Name + " " + btnServer))
+                if (ImGui.Button(example.Setting.Example.Name + " " + btnServer))
                 {
                     example.ToggleServer();
                 }
 
                 var btnClient = example.IsRunningClient ? "Stop Client" : "Run Client";
-                if (ImGui.Button(example.Example.Name + " " + btnClient))
+                if (ImGui.Button(example.Setting.Example.Name + " " + btnClient))
                 {
                     example.ToggleClient();
                 }
@@ -84,6 +84,5 @@ public class ExamplesView : IView
 
     public void Update(double dt)
     {
-        
     }
 }

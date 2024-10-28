@@ -25,7 +25,7 @@ public class UniNettyDemo
 {
     private static readonly IInternalLogger Logger = InternalLoggerFactory.GetInstance<UniNettyDemo>();
 
-    private ExampleContext _context;
+    private UniNettyExampleContext _context;
     private IWindow _window;
     private GL _gl;
     private IInputContext _input;
@@ -46,7 +46,7 @@ public class UniNettyDemo
         var pfx = Path.Combine(AppContext.BaseDirectory, "resources", "uninetty.com.pfx");
         var cert = new X509Certificate2(pfx, "password");
 
-        var context = new ExampleContext();
+        var context = new UniNettyExampleContext();
         context.SetCertificate(cert);
 
         _context = context;
