@@ -52,7 +52,8 @@ public static class Program
             new CsProj("examples", "UniNetty.Examples.Telnet.Client", "Examples"),
             new CsProj("examples", "UniNetty.Examples.Telnet.Server", "Examples"),
             new CsProj("examples", "UniNetty.Examples.WebSockets.Client", "Examples"),
-            new CsProj("examples", "UniNetty.Examples.WebSockets.Server", "Examples")
+            new CsProj("examples", "UniNetty.Examples.WebSockets.Server", "Examples"),
+            new CsProj("examples", "UniNetty.Examples.DemoSupports", "Examples")
         );
 
 
