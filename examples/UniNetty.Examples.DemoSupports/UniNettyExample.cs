@@ -28,6 +28,15 @@ namespace UniNetty.Examples.DemoSupports
         {
             _runClient = runClient;
         }
+        
+        public void Stop()
+        {
+            _stopServer?.Dispose();
+            _stopServer = null;
+            
+            _stopClient?.Dispose();
+            _stopClient = null;
+        }
 
         public void ToggleServer()
         {
