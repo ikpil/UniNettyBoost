@@ -81,7 +81,7 @@ public class LogView : IView
 
         ImGui.PushStyleVar(ImGuiStyleVar.ScrollbarSize, 16.0f);
         
-        if (ImGui.BeginChild("scrolling", Vector2.Zero, false, ImGuiWindowFlags.HorizontalScrollbar))
+        if (ImGui.BeginChild("scrolling", Vector2.Zero, ImGuiChildFlags.None, ImGuiWindowFlags.HorizontalScrollbar))
         {
             //_isHovered = ImGui.IsWindowHovered(ImGuiHoveredFlags.RectOnly | ImGuiHoveredFlags.RootAndChildWindows);
 
