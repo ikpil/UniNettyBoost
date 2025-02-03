@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;net8.0;net9.0</TargetFrameworks>
+    <DefineConstants>UNINETTY_CODECS_PROTOBUF_SUPPORT</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
