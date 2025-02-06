@@ -24,7 +24,12 @@ public class ExamplesView : IView
     {
         //ImGui.ShowDemoWindow();
 
-        ImGui.Begin("Examples");
+        float menuWidth = 260.0f;
+        float offsetY = 50.0f;
+        ImGui.SetNextWindowPos(new Vector2(_canvas.Size.X - menuWidth - 10.0f, offsetY));
+        ImGui.SetNextWindowSize(new Vector2(menuWidth, _canvas.Size.Y - offsetY - 10.0f));
+
+        ImGui.Begin("Examples", ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse);
 
         // size reset
         var rectSize = ImGui.GetItemRectSize();

@@ -6,7 +6,7 @@ namespace UniNetty.Examples.Demo.UI;
 
 public class Canvas
 {
-    public Vector2 Size;
+    public Vector2 Size { get; private set; }
     private ImmutableArray<IView> _view;
 
     public readonly UniNettyExampleContext Context;
