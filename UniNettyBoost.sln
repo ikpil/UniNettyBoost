@@ -93,7 +93,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniNetty.Examples.Demo", "e
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{B4ECF0D1-57E5-4AD1-87AC-DB6C61BC0BD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniNetty.Tools.AddCopyrightHeaderToSourceFiles", "tools\UniNetty.Tools.AddCopyrightHeaderToSourceFiles\UniNetty.Tools.AddCopyrightHeaderToSourceFiles.csproj", "{D64CAFF8-3321-46CF-9A27-8EDF89E06182}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniNetty.Tools.Copyright", "tools\UniNetty.Tools.Copyright\UniNetty.Tools.Copyright.csproj", "{D64CAFF8-3321-46CF-9A27-8EDF89E06182}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniNetty.Tools.PublishToUniNetty", "tools\UniNetty.Tools.PublishToUniNetty\UniNetty.Tools.PublishToUniNetty.csproj", "{FED58FFB-E4BF-497A-B647-2489475202C7}"
 EndProject

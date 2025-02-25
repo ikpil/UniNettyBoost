@@ -7,18 +7,19 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace UniNetty.Tools.AddCopyrightHeaderToSourceFiles;
+namespace UniNetty.Tools.Copyright;
 
 public static class Program
 {
     private static readonly string LineBreak = Environment.NewLine;
 
     private static readonly string HeaderPattern = @"// Copyright \(c\) [\s\S]*?full license information\.";
+
     private static readonly string NoticeTemplate = $"// Copyright (c) Microsoft. All rights reserved.{LineBreak}" +
                                                     $"// Copyright (c) Ikpil Choi ikpil@naver.com All rights reserved.{LineBreak}" +
                                                     $"// Licensed under the MIT license. See LICENSE file in the project root for full license information.{LineBreak}{LineBreak}";
 
-    static int Main()
+    private static int Main(string[] args)
     {
         var currentDir = Directory.GetCurrentDirectory();
         var sulutionFilePath = FindSolutionRoot(currentDir, "UniNetty.sln");
@@ -29,7 +30,7 @@ public static class Program
         }
 
         var parent = Directory.GetParent(sulutionFilePath)!.FullName;
-        
+
         ProcessFiles(Path.Combine(parent, "src"), "*.cs");
         ProcessFiles(Path.Combine(parent, "test"), "*.cs");
         ProcessFiles(Path.Combine(parent, "examples"), "*.cs");
@@ -67,8 +68,8 @@ public static class Program
             .Where(x => !x.Contains($"{Path.DirectorySeparatorChar}bin{Path.DirectorySeparatorChar}"))
             .Where(x => !x.Contains($"{Path.DirectorySeparatorChar}obj{Path.DirectorySeparatorChar}"))
             .ToList();
-            
-                
+
+
         foreach (var file in files)
         {
             AddHeaderToSourceFile(file);
