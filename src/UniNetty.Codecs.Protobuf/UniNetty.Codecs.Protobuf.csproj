@@ -11,6 +11,6 @@
     <ProjectReference Include="..\UniNetty.Transport\UniNetty.Transport.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.31.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.31.1" />
   </ItemGroup>
 </Project>
